@@ -43,41 +43,19 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Blank page
-        <small>it all starts here</small>
+        <?php echo $contentHead ?>
       </h1>
-      <ol class="breadcrumb">
+      <!-- <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#">Examples</a></li>
         <li class="active">Blank page</li>
-      </ol>
+      </ol> -->
     </section>
 
     <!-- Main content -->
     <section class="content">
 
-      <!-- Default box -->
-      <div class="box">
-        <div class="box-header with-border">
-          <h3 class="box-title">Title</h3>
-
-          <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
-              <i class="fa fa-minus"></i></button>
-            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-              <i class="fa fa-times"></i></button>
-          </div>
-        </div>
-        <div class="box-body">
-          Start creating your amazing application!
-        </div>
-        <!-- /.box-body -->
-        <div class="box-footer">
-          Footer
-        </div>
-        <!-- /.box-footer-->
-      </div>
-      <!-- /.box -->
+      <?php echo $contents ?>
 
     </section>
     <!-- /.content -->
@@ -283,10 +261,14 @@
 </div>
 <!-- ./wrapper -->
 
+
 <!-- jQuery 2.1.4 -->
 <script src="<?php echo base_url('bower_components/AdminLTE/plugins/jQuery/jQuery-2.1.4.min.js') ?>"></script>
 <!-- Bootstrap 3.3.5 -->
 <script src="<?php echo base_url('bower_components/AdminLTE/bootstrap/js/bootstrap.min.js') ?>"></script>
+<!-- DataTables -->
+<script src="<?php echo base_url('bower_components/AdminLTE/plugins/datatables/jquery.dataTables.min.js') ?>"></script>
+<script src="<?php echo base_url('bower_components/AdminLTE/plugins/datatables/dataTables.bootstrap.min.js') ?>"></script>
 <!-- SlimScroll -->
 <script src="<?php echo base_url('bower_components/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js') ?>"></script>
 <!-- FastClick -->
@@ -295,5 +277,12 @@
 <script src="<?php echo base_url('bower_components/AdminLTE/dist/js/app.min.js') ?>"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('bower_components/AdminLTE/dist/js/demo.js') ?>"></script>
+
+<script>
+  $(function () {
+    $('#dataTable').DataTable();
+  });
+</script>
+
 </body>
 </html>
